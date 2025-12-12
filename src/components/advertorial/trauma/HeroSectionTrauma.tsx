@@ -1,3 +1,5 @@
+import traumaHero from "@/assets/trauma-hero.jpg";
+
 const HeroSectionTrauma = () => {
   return (
     <section className="pt-6 pb-2">
@@ -10,10 +12,14 @@ const HeroSectionTrauma = () => {
           Una explicación basada en neurociencia sobre por qué tu cuerpo puede permanecer en alerta incluso cuando tu vida ya no está en peligro.
         </p>
         
-        {/* Placeholder for hero image - will be added later */}
         <div className="fade-in stagger-2 mt-4">
-          <div className="relative rounded-xl overflow-hidden shadow-lg bg-muted/30 h-64 md:h-80 flex items-center justify-center">
-            <p className="text-muted-foreground italic">Imagen principal pendiente</p>
+          <div className="relative rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src={traumaHero} 
+              alt="Mujer experimentando ansiedad y estado de alerta constante" 
+              className="w-full h-auto object-contain"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/15 to-transparent" />
           </div>
         </div>
       </div>

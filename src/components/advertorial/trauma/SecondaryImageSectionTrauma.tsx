@@ -1,10 +1,16 @@
+import traumaSecondary from "@/assets/trauma-secondary.jpg";
+
 const SecondaryImageSectionTrauma = () => {
   return (
     <section className="py-2">
       <div className="container-article">
-        {/* Placeholder for secondary image - will be added later */}
-        <div className="relative rounded-xl overflow-hidden shadow-md bg-muted/30 h-48 md:h-64 flex items-center justify-center">
-          <p className="text-muted-foreground italic">Imagen secundaria pendiente</p>
+        <div className="relative rounded-xl overflow-hidden shadow-md">
+          <img 
+            src={traumaSecondary} 
+            alt="Mujer reflexionando sobre salud mental y neurociencia" 
+            className="w-full h-auto object-contain"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
         </div>
       </div>
     </section>
