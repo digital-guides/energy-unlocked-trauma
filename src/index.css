@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/500.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
+@layer base {
+  :root {
+    /* Main palette */
+    --salmon: 7 69% 87%;
+    --salmon-dark: 7 55% 75%;
+    --deep-blue: 209 52% 23%;
+    --deep-blue-light: 209 40% 35%;
+    --soft-gray: 204 20% 96%;
+    --warm-white: 40 30% 98%;
+    
+    /* Core tokens */
+    --background: 40 30% 98%;
+    --foreground: 209 52% 23%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 209 52% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 209 52% 23%;
+
+    --primary: 209 52% 23%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 7 69% 87%;
+    --secondary-foreground: 209 52% 23%;
+
+    --muted: 204 20% 96%;
+    --muted-foreground: 209 30% 45%;
+
+    --accent: 7 69% 87%;
+    --accent-foreground: 209 52% 23%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 209 20% 88%;
+    --input: 209 20% 88%;
+    --ring: 209 52% 23%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --insight-bg: 45 100% 96%;
+    --insight-border: 45 80% 70%;
+    --cta-gradient-from: 142 50% 45%;
+    --cta-gradient-to: 142 45% 38%;
+    --chip-bg: 204 25% 94%;
+    --chip-text: 209 52% 23%;
+    --quote-line: 7 69% 87%;
+    --hero-overlay: 209 52% 23%;
+  }
+
+  .dark {
+    --background: 209 52% 10%;
+    --foreground: 40 30% 98%;
+
+    --card: 209 50% 15%;
+    --card-foreground: 40 30% 98%;
+
+    --popover: 209 50% 15%;
+    --popover-foreground: 40 30% 98%;
+
+    --primary: 7 69% 87%;
+    --primary-foreground: 209 52% 23%;
+
+    --secondary: 209 40% 25%;
+    --secondary-foreground: 40 30% 98%;
+
+    --muted: 209 40% 20%;
+    --muted-foreground: 204 20% 70%;
+
+    --accent: 7 50% 75%;
+    --accent-foreground: 209 52% 10%;
+
+    --border: 209 30% 25%;
+    --input: 209 30% 25%;
+    --ring: 7 69% 87%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .container-article {
+    @apply max-w-2xl mx-auto px-5 md:px-8;
+  }
+
+  .section-spacing {
+    @apply py-12 md:py-16;
+  }
+
+  .title-hero {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-primary;
+  }
+
+  .title-section {
+    @apply text-2xl md:text-3xl font-semibold text-primary mb-6;
+  }
+
+  .body-text {
+    @apply text-base md:text-lg leading-relaxed text-foreground/90;
+  }
+
+  .highlight-box {
+    @apply bg-muted rounded-xl p-6 md:p-8 border-l-4 border-secondary;
+  }
+
+  .insight-box {
+    @apply bg-[hsl(var(--insight-bg))] rounded-xl p-6 md:p-8 border border-[hsl(var(--insight-border))];
+  }
+
+  .salmon-box {
+    @apply bg-secondary/30 rounded-xl p-6 md:p-8 border border-secondary;
+  }
+
+  .chip {
+    @apply inline-flex items-center px-4 py-2 rounded-full bg-[hsl(var(--chip-bg))] text-[hsl(var(--chip-text))] text-sm font-medium;
+  }
+
+  .cta-button {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl text-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+    background: linear-gradient(135deg, hsl(var(--cta-gradient-from)), hsl(var(--cta-gradient-to)));
+    box-shadow: 0 8px 30px -8px hsl(var(--cta-gradient-from) / 0.5);
+  }
+
+  .cta-button:hover {
+    box-shadow: 0 12px 40px -8px hsl(var(--cta-gradient-from) / 0.6);
+  }
+
+  .quote-block {
+    @apply relative pl-6 border-l-4 border-[hsl(var(--quote-line))] italic text-foreground/80;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+}
