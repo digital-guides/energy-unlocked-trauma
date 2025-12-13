@@ -1,5 +1,5 @@
 import traumaHero from "@/assets/trauma-hero.jpg";
-import logoReconexion from "@/assets/logo-reconexion.png";
+import logoReconexion from "@/assets/logo-reconexion.jpg";
 
 const HeroSectionTrauma = () => {
   return (
