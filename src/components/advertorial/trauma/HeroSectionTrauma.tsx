@@ -1,9 +1,15 @@
 import traumaHero from "@/assets/trauma-hero.jpg";
+import logoReconexion from "@/assets/logo-reconexion.png";
 
 const HeroSectionTrauma = () => {
   return (
     <section className="pt-6 pb-2">
       <div className="container-article text-center">
+        <img 
+          src={logoReconexion} 
+          alt="Reconexión Expresiva" 
+          className="w-16 h-auto mx-auto mb-3 fade-in"
+        />
         <h1 className="text-2xl md:text-4xl font-serif font-bold text-primary leading-tight mb-3 fade-in">
           "Vivir lista para lo peor no es personalidad… es supervivencia."
         </h1>
