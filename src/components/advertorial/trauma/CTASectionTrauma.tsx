@@ -13,10 +13,13 @@ const CTASectionTrauma = () => {
             Haz el Test y descubre si tu sistema nervioso está en modo alerta crónica.
           </p>
           
-          <button className="cta-button group mb-2">
+          <a 
+            href="https://nervous-system-test.netlify.app/" 
+            className="cta-button mb-2"
+          >
             <span>Hacer el Test Ahora</span>
-            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-          </button>
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </a>
           
           <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
             <Clock className="w-4 h-4" />
