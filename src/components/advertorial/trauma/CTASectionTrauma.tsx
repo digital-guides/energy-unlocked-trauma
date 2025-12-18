@@ -8,19 +8,16 @@ const CTASectionTrauma = () => {
           <h2 className="text-2xl md:text-3xl font-serif font-semibold text-primary mb-2">
             ¿Tu sistema nervioso está en modo alerta crónica?
           </h2>
-          
+
           <p className="body-text text-muted-foreground mb-4">
             Haz el Test y descubre si tu sistema nervioso está en modo alerta crónica.
           </p>
-          
-          <a 
-            href="https://navegador-del-sistema-nervioso.lovable.app" 
-            className="cta-button mb-2"
-          >
+
+          <a href="https://test-sistemanervioso.lovable.app" className="cta-button mb-2">
             <span>Hacer el Test Ahora</span>
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
-          
+
           <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
             <Clock className="w-4 h-4" />
             <span>Toma menos de 2 minutos</span>
